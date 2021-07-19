@@ -1,0 +1,102 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  echo = FALSE
+)
+
+library(magrittr)
+
+main_repo <- "main-visualizacao"
+turma <- "202106-visualizacao"
+num_aula <- 1
+```
+
+
+## Informações importantes
+
+- Os **pacotes necessários** no curso e o código para instalação estão disponíveis [neste link](https://curso-r.github.io/main-visualizacao#pacotes-necess%C3%A1rios).
+
+- Nosso livro **Ciência de Dados em R**: [https://livro.curso-r.com/](https://livro.curso-r.com/)
+
+- Nosso blog: [https://curso-r.com/blog/](https://curso-r.com/blog/)
+
+## Dúvidas
+
+Fora do horário de aula ou monitoria:
+
+- perguntas gerais sobre o curso deverão ser feitas no Classroom.
+
+- perguntas sobre R, principalmente as que envolverem código, deverão ser enviadas no [nosso fórum](https://discourse.curso-r.com/).
+
+## Slides
+
+```{r}
+tibble::tibble(
+  slide = CursoRutils:::list_github_files(main_repo, "slides/", ".html"),
+  link = paste0("https://curso-r.github.io/", main_repo, "/", slide)
+) %>% 
+  dplyr::filter(!stringr::str_detect(slide, "_files/"),
+                stringr::str_ends(slide, ".html")) %>% 
+  dplyr::slice(1:2) %>% 
+  knitr::kable()
+```
+
+## Scripts utilizados em aula
+
+Aqui colocamos scripts utilizados em aula que são novos ou que são versões modificadas do material básico da aula.
+
+```{r}
+pasta <- "exemplos_de_aula/"
+tibble::tibble(
+  script = list.files(pasta, pattern = ".R"),
+  link = paste0("https://curso-r.github.io/", turma, "/", pasta, script)
+) %>% 
+  knitr::kable()
+```
+
+## Material extra
+
+Referências extras comentadas nas aulas.
+
+```{r, message=FALSE}
+googlesheets4::gs4_deauth()
+"1SmCKCvJBff3CVty-xYKJ4NhEo2j6sUwkdET46vQisDY" %>% 
+  googledrive::as_id() %>% 
+  googlesheets4::read_sheet(main_repo) %>%
+  dplyr::filter(aula < num_aula) %>% 
+  dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
+  dplyr::select(-desc, -url) %>%
+  dplyr::arrange(aula) %>% 
+  knitr::kable(col.names = c("Aula", "Tema", "Descrição"))
+```
+
+## Dados
+
+```{r}
+pasta <- "dados/"
+tibble::tibble(
+  script = list.files(pasta, recursive = TRUE,pattern = ".zip|.Rds|.rds"),
+  link = paste0("https://curso-r.github.io/", turma, "/", pasta, script)
+) %>% 
+  knitr::kable()
+```
+
+
+## Redes sociais da Curso-R
+
+Instagram: https://www.instagram.com/cursoo_r/
+
+Twitter: https://twitter.com/curso_r
+
+Youtube: https://www.youtube.com/c/CursoR6/featured
+
+Linkedin: https://www.linkedin.com/company/curso-r/
+
+Facebook: https://www.facebook.com/cursodeR
