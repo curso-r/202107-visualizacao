@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 library(magrittr)
 
 main_repo <- "main-visualizacao"
-turma <- "202106-visualizacao"
+turma <- "202107-visualizacao"
 num_aula <- 1
 ```
 
