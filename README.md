@@ -36,9 +36,10 @@ Fora do horário de aula ou monitoria:
 Aqui colocamos scripts utilizados em aula que são novos ou que são
 versões modificadas do material básico da aula.
 
-| script                        | link                                                                                           |
-|:------------------------------|:-----------------------------------------------------------------------------------------------|
-| 01-rmarkdown/01-rmarkdown.Rmd | <https://curso-r.github.io/202107-visualizacao/exemplos_de_aula/01-rmarkdown/01-rmarkdown.Rmd> |
+| script                         | link                                                                                            |
+|:-------------------------------|:------------------------------------------------------------------------------------------------|
+| 01-rmarkdown/01-rmarkdown.html | <https://curso-r.github.io/202107-visualizacao/exemplos_de_aula/01-rmarkdown/01-rmarkdown.html> |
+| 01-rmarkdown/01-rmarkdown.Rmd  | <https://curso-r.github.io/202107-visualizacao/exemplos_de_aula/01-rmarkdown/01-rmarkdown.Rmd>  |
 
 ## Material extra
 
