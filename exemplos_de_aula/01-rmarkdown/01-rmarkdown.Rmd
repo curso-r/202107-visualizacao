@@ -1,0 +1,102 @@
+---
+title: "Aula 1"
+author: "-"
+date: "7/22/2021"
+# output: html_document
+# output: word_document
+# output: powerpoint_presentation
+output: prettydoc::html_pretty
+---
+
+```{r setup, include=FALSE}
+# podemos configurar opções de chunk para serem usadas ao longo do relatório
+knitr::opts_chunk$set(echo = TRUE,
+                      message=FALSE,
+                      warning=FALSE)
+```
+
+
+## Testando o Rmarkdown
+
+- Carregar os pacotes
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+library(ggplot2)
+library(magrittr) # %>% 
+```
+
+## Criar gráficos
+
+- Centralizado e com largura de 50%
+
+```{r, echo = TRUE, fig.align='center', out.width="50%"}
+ggplot(mtcars) +
+  geom_point(aes(x = wt, y = mpg))
+```
+
+- Largura e altura definida, centralizado, e adicionando uma legenda para figura e também textos que serão usados na tag alt do html (acessibilidade):
+
+```{r, echo = TRUE, fig.align='center', fig.height=4, fig.width=4, fig.cap="Gráfico da base mtcars", fig.alt="Gráfico de pontos da base mtcars, onde a variável wt está representada no eixo x e a variável mpg está representada no eixo y."}
+ggplot(mtcars) +
+  geom_point(aes(x = wt, y = mpg))
+```
+
+- Alterando a resolução da imagem com a opção dpi (dpi maior, qualidade maior)
+```{r, echo = TRUE, fig.align='center', dpi = 400}
+ggplot(mtcars) +
+  geom_point(aes(x = wt, y = mpg))
+```
+
+## adicionando uma tabela
+
+```{r tabela, echo=FALSE}
+# adicionar uma tabela
+mtcars %>% 
+  head(5) %>% 
+  knitr::kable()
+```
+
+## Adicionando código inline
+
+```{r}
+mpg_mazda <- mtcars[1,1]
+```
+
+
+o resultado de 1 + 1  é `r 1+1`. O valor de mpg do carro Mazda é `r mpg_mazda`.
+
+
+## Importação
+
+- Qual é o diretório de trabalho atual?
+
+```{r}
+getwd()
+```
+
+- Carregando os dados: cuidado com os caminhos!
+
+```{r}
+imdb <- readr::read_rds("../../dados/imdb.rds")
+```
+
+
+- Outra dica: pacote here!
+
+```{r}
+imdb <- readr::read_rds(here::here("dados", "imdb.rds"))
+```
+
+
+
+## Código que aparece no relatório
+
+```{r, echo = TRUE}
+dplyr::glimpse(imdb)
+```
+

@@ -57,9 +57,10 @@ Aqui colocamos scripts utilizados em aula que são novos ou que são versões mo
 ```{r}
 pasta <- "exemplos_de_aula/"
 tibble::tibble(
-  script = list.files(pasta, pattern = ".R"),
+  script = list.files(pasta, pattern = ".R", recursive = TRUE),
   link = paste0("https://curso-r.github.io/", turma, "/", pasta, script)
 ) %>% 
+  dplyr::slice(1) %>% 
   knitr::kable()
 ```
 
@@ -72,7 +73,7 @@ googlesheets4::gs4_deauth()
 "1SmCKCvJBff3CVty-xYKJ4NhEo2j6sUwkdET46vQisDY" %>% 
   googledrive::as_id() %>% 
   googlesheets4::read_sheet(main_repo) %>%
-  dplyr::filter(aula < num_aula) %>% 
+  dplyr::filter(aula <= num_aula) %>% 
   dplyr::mutate(link = glue::glue("[{desc}]({url})")) %>%
   dplyr::select(-desc, -url) %>%
   dplyr::arrange(aula) %>% 

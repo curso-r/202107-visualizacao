@@ -36,27 +36,48 @@ Fora do horário de aula ou monitoria:
 Aqui colocamos scripts utilizados em aula que são novos ou que são
 versões modificadas do material básico da aula.
 
-| script | link |
-|:-------|:-----|
+| script                        | link                                                                                           |
+|:------------------------------|:-----------------------------------------------------------------------------------------------|
+| 01-rmarkdown/01-rmarkdown.Rmd | <https://curso-r.github.io/202107-visualizacao/exemplos_de_aula/01-rmarkdown/01-rmarkdown.Rmd> |
 
 ## Material extra
 
 Referências extras comentadas nas aulas.
 
-| Aula | Tema        | Descrição                                                                                            |
-|-----:|:------------|:-----------------------------------------------------------------------------------------------------|
-|    0 | Instalação  | [Capítulo do livro “Ciência de Dados em R”: Instalação](https://livro.curso-r.com/1-instalacao.html) |
-|    0 | Comunidades | [R Brasil - Grupo no telegram](https://t.me/rbrasiloficial)                                          |
-|    0 | Comunidades | [Apresentação sobre a R-Ladies São Paulo](https://r-ladies-sao-paulo.github.io/RLadiesTheme/)        |
-|    0 | Comunidades | [Capítulos da R-Ladies no Brasil](https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil)              |
-|    0 | Comunidades | [R-Ladies - Dashboard](https://benubah.github.io/r-community-explorer/rladies.html)                  |
-|    0 | Comunidades | [AI Inclusive](https://www.ai-inclusive.org/)                                                        |
-|    0 | Comunidades | [Discourse da Curso-R](https://discourse.curso-r.com)                                                |
+| Aula | Tema        | Descrição                                                                                                    |
+|-----:|:------------|:-------------------------------------------------------------------------------------------------------------|
+|    0 | Instalação  | [Capítulo do livro “Ciência de Dados em R”: Instalação](https://livro.curso-r.com/1-instalacao.html)         |
+|    0 | Comunidades | [R Brasil - Grupo no telegram](https://t.me/rbrasiloficial)                                                  |
+|    0 | Comunidades | [Apresentação sobre a R-Ladies São Paulo](https://r-ladies-sao-paulo.github.io/RLadiesTheme/)                |
+|    0 | Comunidades | [Capítulos da R-Ladies no Brasil](https://github.com/R-Ladies-Sao-Paulo/RLadies-Brasil)                      |
+|    0 | Comunidades | [R-Ladies - Dashboard](https://benubah.github.io/r-community-explorer/rladies.html)                          |
+|    0 | Comunidades | [AI Inclusive](https://www.ai-inclusive.org/)                                                                |
+|    0 | Comunidades | [Discourse da Curso-R](https://discourse.curso-r.com)                                                        |
+|    1 | Gráficos    | [Capítulo do livro “Ciência de Dados em R”: Gráficos](https://livro.curso-r.com/8-graficos.html)             |
+|    1 | Introdução  | [Video curto sobre reprex](https://youtu.be/IxlGYVnaGXk)                                                     |
+|    1 | Introdução  | [Tema do blogdown - Aperó](https://hugo-apero.netlify.app/about/)                                            |
+|    1 | RMarkdown   | [Pacote {thesisdown}](https://github.com/ismayc/thesisdown)                                                  |
+|    1 | Dúvidas     | [Novo Pipe](https://blog.curso-r.com/posts/2021-05-06-o-novo-pipe-esta-chegando/)                            |
+|    1 | RMarkdown   | [Guia de referência do RMarkdown](https://rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)    |
+|    1 | RMarkdown   | [Plotando figuras lado a lado](https://bookdown.org/yihui/rmarkdown-cookbook/figures-side.html)              |
+|    1 | RMarkdown   | [Prettydoc](https://prettydoc.statr.me/themes.html)                                                          |
+|    1 | RMarkdown   | [Capítulo do livro “Ciência de Dados em R”: Relatórios](https://livro.curso-r.com/9-relatorios.html)         |
+|    1 | RMarkdown   | [Folha de cola (cheatsheet): RMarkdown](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf) |
+|    1 | Dúvidas     | [Uso dos quatro pontos ::](https://curso-r.github.io/zen-do-r/funcoes-deps.html#quatro-pontos)               |
+|    1 | Dúvidas     | [Estilos de CSL - estilos de citação](https://github.com/citation-style-language/styles)                     |
+|    1 | Dúvidas     | [Zotero - gerenciador de referencias](https://www.zotero.org/)                                               |
 
 ## Dados
 
-| script | link |
-|:-------|:-----|
+| script                        | link                                                                               |
+|:------------------------------|:-----------------------------------------------------------------------------------|
+| geobr/escolas\_brasilia.Rds   | <https://curso-r.github.io/202107-visualizacao/dados/geobr/escolas_brasilia.Rds>   |
+| geobr/estado\_df.Rds          | <https://curso-r.github.io/202107-visualizacao/dados/geobr/estado_df.Rds>          |
+| geobr/estados.Rds             | <https://curso-r.github.io/202107-visualizacao/dados/geobr/estados.Rds>            |
+| geobr/municipio\_brasilia.Rds | <https://curso-r.github.io/202107-visualizacao/dados/geobr/municipio_brasilia.Rds> |
+| geobr/municipios\_todos.rds   | <https://curso-r.github.io/202107-visualizacao/dados/geobr/municipios_todos.rds>   |
+| imdb.rds                      | <https://curso-r.github.io/202107-visualizacao/dados/imdb.rds>                     |
+| rodovias\_df.Rds              | <https://curso-r.github.io/202107-visualizacao/dados/rodovias_df.Rds>              |
 
 ## Redes sociais da Curso-R
 
