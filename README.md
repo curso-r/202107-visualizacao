@@ -26,10 +26,12 @@ Fora do horário de aula ou monitoria:
 
 ## Slides
 
-| slide                              | link                                                                             |
-|:-----------------------------------|:---------------------------------------------------------------------------------|
-| slides/01-introducao-ao-curso.html | <https://curso-r.github.io/main-visualizacao/slides/01-introducao-ao-curso.html> |
-| slides/02-introducao-rmd.html      | <https://curso-r.github.io/main-visualizacao/slides/02-introducao-rmd.html>      |
+| slide                                     | link                                                                                    |
+|:------------------------------------------|:----------------------------------------------------------------------------------------|
+| slides/01-introducao-ao-curso.html        | <https://curso-r.github.io/main-visualizacao/slides/01-introducao-ao-curso.html>        |
+| slides/02-introducao-rmd.html             | <https://curso-r.github.io/main-visualizacao/slides/02-introducao-rmd.html>             |
+| slides/04-html-css.html                   | <https://curso-r.github.io/main-visualizacao/slides/04-html-css.html>                   |
+| slides/05-apresentacoes-com-xaringan.html | <https://curso-r.github.io/main-visualizacao/slides/05-apresentacoes-com-xaringan.html> |
 
 ## Scripts utilizados em aula
 
