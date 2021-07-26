@@ -1,0 +1,58 @@
+---
+title: "Exemplo de HTML e CSS"
+author: "Profs Curso-R"
+date: "7/26/2021"
+output: 
+  html_document:
+    css: "custom.css"
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
+</style>
+
+```{css echo=FALSE}
+/*  comentarios  */ 
+h1{
+  color: #a94442;
+}
+
+h1.title{
+ font-size: 50px;
+ font-family: 'Fuggles', cursive;
+}
+
+p{
+  text-align: justify;
+  font-size: 16px;
+}
+```
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q1Mp5S8fhgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
