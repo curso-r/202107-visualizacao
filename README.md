@@ -104,6 +104,7 @@ Referências extras comentadas nas aulas.
 |    2 | HTML e CSS    | [Livro RMarkdown Cookbook - HTML e css](https://bookdown.org/yihui/rmarkdown-cookbook/html-css.html)                        |
 |    2 | Pagedown      | [Exemplo de uso do tema thesis do pagedown](https://github.com/Athospd/mestrado/blob/master/inst/monografia/monografia.pdf) |
 |    2 | RMarkdown     | [Referenciando equações no RMarkdown](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html)             |
+|    2 | xaringan      | [Material sobre xaringan - video e slides - LatinR](https://r-ladies-sao-paulo.github.io/xaringan/)                         |
 
 ## Dados
 
