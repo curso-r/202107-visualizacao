@@ -15,7 +15,7 @@ library(magrittr)
 
 main_repo <- "main-visualizacao"
 turma <- "202107-visualizacao"
-num_aula <- 2
+num_aula <- 3
 ```
 
 
@@ -46,7 +46,7 @@ tibble::tibble(
 ) %>% 
   dplyr::filter(!stringr::str_detect(slide, "_files/"),
                 stringr::str_ends(slide, ".html")) %>% 
-  dplyr::slice(c(1,2,5,6)) %>% 
+ # dplyr::slice(c(1,2,5,7)) %>% 
   knitr::kable()
 ```
 
@@ -63,7 +63,7 @@ tibble::tibble(
   
 
 ) %>% 
- dplyr::slice(-c(25:28)) %>% 
+  dplyr::slice(-c(28)) %>% 
   knitr::kable()
 ```
 
