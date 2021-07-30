@@ -53,13 +53,18 @@ temperatura_por_mes <- clima %>%
 ```{r}
 temperatura_por_mes %>% 
   ggplot() +
-  geom_line(aes(x = mes, y = origem, color = temperatura_media), size = 10) +
+  geom_line(aes(x = as.character(mes), y = origem, color = temperatura_media, group = origem), size = 10) +
   # theme_bw() 
   # theme_classic() 
   # theme_dark()
   theme_minimal()
-```
 
+temperatura_por_mes %>% 
+  mutate(n = 1) %>% 
+  ggplot() +
+  geom_col(aes(x = 1, y = origem, fill = temperatura_media), size = 10)
+
+```
 
 - A função theme()
 
@@ -68,20 +73,21 @@ temperatura_por_mes %>%
   ggplot() +
   geom_line(aes(x = mes, y = origem, color = temperatura_media), size = 10) +
   labs(
-    title = "Gráfico de dispersão",
+    title = "Gráfico de <span style='color:red;'>dispersão</span>",
     subtitle = "Receita vs Orçamento",
     x = "Mês",
     y = "Aeroporto mais próximo do ponto de medição",
     color = "Temperatura média (ºC)"
   ) +
   theme(
-    plot.title = element_text(hjust = 0.5),
+    plot.title = ggtext::element_markdown(hjust = .5),
     plot.subtitle = element_text(hjust = 0.5)
   )
 ```
 
 ```{r}
 grafico_base <- temperatura_por_mes %>% 
+  mutate(mes = as.Date(mes)) %>% 
   ggplot() +
   geom_line(aes(x = mes, y = origem, color = temperatura_media), size = 10) +
   labs(
@@ -93,7 +99,19 @@ grafico_base <- temperatura_por_mes %>%
     caption = "Fonte: ASOS download from Iowa Environmental Mesonet"
   )
 
-grafico_base
+arruma_maiusculo <- function(x) {
+  stringr::str_to_title(format(x, "%b\n%Y"))
+}
+auxiliar_dinheiros <- function(x) {
+  scales::dollar(x, prefix = "R$", big.mark = ".", decimal.mark = ",")
+}
+
+grafico_base +
+  scale_x_date(
+    date_breaks = "8 weeks",
+    labels = arruma_maiusculo
+  ) +
+  theme(axis.text.x = element_text(size = 15))
 ```
 
 Vamos explorar os componentes mais importantes do theme!
@@ -277,7 +295,7 @@ temperatura_por_mes %>%
     y = "Aeroporto mais próximo do ponto de medição",
     color = "Temperatura média (ºC)"
   ) +
-  ggthemes::theme_fivethirtyeight()
+  ggthemes::theme_fivethirtyeight(base_family = "Roboto Mono")
 ```
 
 
@@ -294,7 +312,7 @@ temperatura_por_mes %>%
     y = "Aeroporto mais próximo do ponto de medição",
     color = "Temperatura média (ºC)"
   ) +
-  ggthemes::theme_gdocs()
+  hrbrthemes::theme_ipsum_tw()
 ```
 
 ### Tema com apenas a cor de fundo (legal para mapas)
@@ -310,7 +328,7 @@ temperatura_por_mes %>%
     y = "Aeroporto mais próximo do ponto de medição",
     color = "Temperatura média (ºC)"
   ) +
-  ggthemes::theme_solid()
+  ggthemes::theme_hc()
 ```
 
 ### Tema HC
@@ -338,6 +356,33 @@ Existem muitas, muitas paletas de cores para serem usadas.
 
 No {ggplot2}, temos já implementadas as paletas viridis e ColorBrewer. Vamos mostrar alguns exemplos de cada
 
+```{r}
+scales::show_col(c("#12aabb", "#dd0000"))
+scales::show_col(viridis::viridis(10, begin = .2, end = .8))
+
+mtcars %>% 
+  ggplot(aes(x = cyl/max(cyl), y = disp/max(disp))) +
+  geom_point() + 
+  theme(aspect.ratio = .7)
+```
+
+
+```{r}
+
+# {ggtext}
+mtcars %>% 
+  ggplot(aes(x = cyl, y = disp)) +
+  geom_point() +
+  labs(
+    title = "Título de <span style='color:red;'>cores</span>"
+  ) +
+  theme(
+     plot.title = ggtext::element_markdown(size = 20)
+  )
+
+
+```
+
 ### Viridis
 
 ```{r}
@@ -354,7 +399,6 @@ ggplot(diamante, aes(quilate, preco)) +
   scale_x_log10() + 
   scale_y_log10() +
   theme_minimal()
-
 ```
 
 - variaveis ordinais já vem em viridis
@@ -372,7 +416,7 @@ diamante %>%
 diamante %>% 
   dplyr::mutate(cor = factor(as.character(cor))) %>% 
   ggplot(aes(corte, fill = cor)) +
-  scale_fill_viridis_d(option = "A") +
+  scale_fill_viridis_d(option = "B") +
   geom_bar()
 
 p_base <- diamante %>% 
@@ -430,7 +474,6 @@ ggplot(diamante, aes(quilate, preco)) +
   scale_x_log10() + 
   scale_y_log10() +
   theme_minimal()
-
 ```
 
 ## Fazendo seu próprio esquema de cores

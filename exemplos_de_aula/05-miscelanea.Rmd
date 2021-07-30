@@ -17,6 +17,16 @@ knitr::opts_chunk$set(
 
 ```{r}
 library(sf)
+library(ggplot2)
+fname <- system.file("shape/nc.shp", package="sf")
+nc <- st_read(fname)
+ggplot(nc) + geom_sf() 
+```
+
+
+
+```{r}
+library(sf)
 library(dplyr)
 library(leaflet)
 library(plotly)
@@ -48,6 +58,8 @@ dados_idh_muni <- abjData::pnud_min %>%
 # unir a base de municipios do geobr com a base de IDH
 municipios <- readr::read_rds("../dados/geobr/municipios_todos.rds") %>%
   inner_join(dados_idh_muni)
+
+# municipios <- readr::read_rds("../dados/municipios_tibble.Rds")
 
 # se quiser buscar esses dados com o pacote geobr, 
 # o código é o seguinte
@@ -213,8 +225,10 @@ dados_summ %>%
 # geom_encircle é interessante para destacar pontos distantes da nuvem de pontos
 library(ggalt)
 
+# abjData::pnud_min
+
 pontos_diferentes <- municipios %>% 
-  filter(uf_sigla == "RS", ano == 2010, pop > 1e6)
+  filter(uf_sigla == "RS", ano == 2010, pop > 4e5)
 
 gg_alt <- municipios %>% 
   filter(uf_sigla == "RS", ano == 2010) %>% 
@@ -224,6 +238,8 @@ gg_alt <- municipios %>%
     data = pontos_diferentes,
     color = "red", s_shape = .1, expand = .01, size = 3
   )
+
+# ggalt::stat_stepribbon()
 
 gg_alt
 ```
@@ -238,7 +254,7 @@ gg_highlight <- municipios %>%
   ggplot(aes(idhm_e, pop)) +
   geom_point() +
   gghighlight::gghighlight(
-    pop > 1e6,
+    pop > 4e5,
     label_key = name_muni
   )
 
@@ -248,17 +264,29 @@ gg_highlight
 ### ggrepel
 
 ```{r}
-gg_repel <- municipios %>% 
+
+municipios %>% 
   filter(uf_sigla == "RR", ano == 2010) %>% 
   ggplot(aes(idhm_e, idhm_l)) +
   geom_point() +
-  ggrepel::geom_label_repel(aes(label = name_muni))
+  geom_label(aes(label = name_muni))
+
+gg_repel <- municipios %>% 
+  filter(uf_sigla == "PB", ano == 2010) %>% 
+  ggplot(aes(idhm_e, idhm_l)) +
+  geom_point() +
+  ggrepel::geom_label_repel(aes(label = name_muni), force = 100)
+
+gg_repel
 ```
+
 ### patchwork
 
 Na mesma linha
 
 ```{r}
+library(patchwork)
+
 gg_alt + gg_highlight
 ```
 
@@ -267,13 +295,16 @@ Na mesma coluna
 ```{r}
 gg_alt / gg_highlight
 
-gg_alt + gg_highlight +
-  plot_layout(ncol = 1)
+gg_alt + gg_highlight + gg_highlight +
+  plot_layout(nrow = 2)
 ```
 Expressões
 
 ```{r}
 (gg_alt + gg_highlight) / gg_repel
+
+ggsave("ggplot.svg", gg_highlight)
+
 ```
 
 ## gganimate
