@@ -37,12 +37,14 @@ temperatura_por_mes <- clima %>%
          temperatura_celsius = ((temperatura - 32)*5)/9) %>% 
   
   # agrupa por origem e mês
-  group_by(origem, mes) %>%
+ group_by(origem, mes) %>%
   # faz uma sumarização: temperatura média para cada combinação
   # de mês e origem
   summarise(temperatura_media = mean(temperatura_celsius, na.rm = TRUE)) %>%
   # desagrupar a base final
   ungroup() 
+
+temperatura_por_mes
 ```
 
 
@@ -53,11 +55,15 @@ temperatura_por_mes <- clima %>%
 ```{r}
 temperatura_por_mes %>% 
   ggplot() +
-  geom_line(aes(x = as.character(mes), y = origem, color = temperatura_media, group = origem), size = 10) +
+  geom_line(
+    aes(x = as.character(mes), y = origem, color = temperatura_media, group = origem), 
+    size = 10
+  ) +
   # theme_bw() 
   # theme_classic() 
   # theme_dark()
   theme_minimal()
+```
 
 temperatura_por_mes %>% 
   mutate(n = 1) %>% 
@@ -71,10 +77,11 @@ temperatura_por_mes %>%
 ```{r}
 temperatura_por_mes %>% 
   ggplot() +
-  geom_line(aes(x = mes, y = origem, color = temperatura_media), size = 10) +
+  geom_line(aes(x = mes, y = origem, color = temperatura_media), size = 10) + 
   labs(
     title = "Gráfico de <span style='color:red;'>dispersão</span>",
     subtitle = "Receita vs Orçamento",
+    caption = "Dados do pacote dados",
     x = "Mês",
     y = "Aeroporto mais próximo do ponto de medição",
     color = "Temperatura média (ºC)"
@@ -127,7 +134,14 @@ Vamos explorar os componentes mais importantes do theme!
 ```{r}
 grafico_base +
   theme(
-    axis.text = element_text(color = 'red', size = 20)
+    axis.text = element_text(color = 'green', size = 15) # tamanho em milimetros
+  )
+
+
+# Exemplo do tamanho em pontos
+grafico_base +
+  theme(
+    axis.text = element_text(color = 'green', size = 20/.pt) # tamanho em pontos
   )
 ```
 
@@ -149,6 +163,7 @@ grafico_base +
   theme(
     legend.text = element_text(color = 'red', size = 20)
   )
+
 ```
 
 - mudando a posição da legenda
@@ -156,7 +171,13 @@ grafico_base +
 ```{r}
 grafico_base +
   theme(
-    legend.position = 'bottom'
+    legend.position = 'bottom' # top/bottom/left/right
+  )
+
+
+grafico_base +
+  theme(
+    legend.position = c(0.5, 0.5) # coordenadas, posicao no eixo x e y
   )
 ```
 
@@ -166,7 +187,7 @@ grafico_base +
 grafico_base +
   theme(
     legend.position = 'bottom',
-    legend.justification = 'left'
+    legend.justification = 'right'
     # o valor padrão desse parâmetro é 'center'
   )
 ```
@@ -187,11 +208,12 @@ grafico_base +
 ```{r}
 grafico_base +
   theme(
-    legend.position = c(0, 1),
+    legend.position = c(0.5, .8),
     legend.justification = 'left',
     legend.direction = 'vertical'
   )
 ```
+ 
   - (b) element_rect, para bordas e fundos, como panel.background. Exemplos: 
 
 - mudando a cor do fundo
@@ -199,7 +221,7 @@ grafico_base +
 ```{r}
 grafico_base +
   theme(
-    panel.background = element_rect(fill = 'white')
+    panel.background = element_rect(fill = 'gray')
   )
 ```
 
@@ -209,7 +231,7 @@ grafico_base +
 ```{r}
 grafico_base +
   theme(
-    panel.background = element_rect(fill = 'white', color = 'gray')
+    panel.background = element_rect(fill = 'white', color = 'red')
   )
 ```
 
@@ -295,7 +317,11 @@ temperatura_por_mes %>%
     y = "Aeroporto mais próximo do ponto de medição",
     color = "Temperatura média (ºC)"
   ) +
-  ggthemes::theme_fivethirtyeight(base_family = "Roboto Mono")
+  ggthemes::theme_fivethirtyeight() #+ 
+  # theme(
+  #   plot.title = element_text(hjust = 0.5),
+  #   plot.subtitle = element_text(hjust = 0.5)
+  # )
 ```
 
 
@@ -310,7 +336,7 @@ temperatura_por_mes %>%
     subtitle = "Receita vs Orçamento",
     x = "Mês",
     y = "Aeroporto mais próximo do ponto de medição",
-    color = "Temperatura média (ºC)"
+    color = "Temperatura\nmédia (ºC)"
   ) +
   hrbrthemes::theme_ipsum_tw()
 ```
@@ -341,7 +367,7 @@ temperatura_por_mes %>%
     title = "Gráfico de dispersão",
     subtitle = "Receita vs Orçamento",
     x = "Mês",
-    y = "Aeroporto mais próximo do ponto de medição",
+    y = "Aeroporto mais próximo \n do ponto de medição",
     color = "Temperatura média (ºC)"
   ) +
   ggthemes::theme_hc()

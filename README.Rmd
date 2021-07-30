@@ -15,7 +15,7 @@ library(magrittr)
 
 main_repo <- "main-visualizacao"
 turma <- "202107-visualizacao"
-num_aula <- 1
+num_aula <- 2
 ```
 
 
@@ -58,9 +58,12 @@ Aqui colocamos scripts utilizados em aula que são novos ou que são versões mo
 pasta <- "exemplos_de_aula/"
 tibble::tibble(
   script = list.files(pasta, pattern = ".R|.html|.css", recursive = TRUE),
-  link = paste0("https://curso-r.github.io/", turma, "/", pasta, script)
+  link = paste0("https://curso-r.github.io/", turma, "/", pasta, script),
+  link_no_github = paste0("https://github.com/curso-r/", turma, "/blob/main/", pasta, script)
+  
+
 ) %>% 
-  dplyr::slice(1:5) %>% 
+ dplyr::slice(-c(25:28)) %>% 
   knitr::kable()
 ```
 
