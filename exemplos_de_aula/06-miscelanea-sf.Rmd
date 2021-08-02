@@ -1,0 +1,68 @@
+---
+title: "06-miscelanea-sf"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	echo = TRUE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+## Carregar pacotes
+```{r}
+library(dplyr)
+library(ggplot2)
+library(sf)
+```
+
+## Importar as bases de dados
+
+```{r}
+estados <- readr::read_rds("../dados/geobr/estados.Rds")
+
+pnud_uf_sf <- estados %>%
+  left_join(abjData::pnud_uf, by = c("code_state" = "uf")) %>%
+  filter(name_region == "Nordeste", ano == 2010)
+```
+
+## Fazer o gráfico
+
+```{r}
+pnud_uf_sf %>%
+  ggplot() +
+  geom_sf(aes(fill = espvida)) +
+  theme_bw() + # tema branco e preto
+  
+  # adicionar escala
+  ggspatial::annotation_scale() + 
+  
+  # adicionar a seta de norte. 
+  # heigth e width definem altura e largura
+  # location é o lugar no mapa
+  # tr = top right
+  # é legal experimentar outros,
+  # como: tl, br, bl
+  ggspatial::annotation_north_arrow(
+    location = "tr",
+    height = unit(1, "cm"),
+    width = unit(1, "cm")
+  ) +
+  # mudar coisas do tema
+  theme(
+    # no eixo y: 
+    axis.text.y = element_text(
+      # muda o angulo, texto deitado
+      angle = 90,
+      # centraliza
+      hjust = 0.5,
+      # muda o tamanho do texto
+      size = 8
+    ),
+    # muda o tamanho do texto no eixo x
+    axis.text.x = element_text(size = 8)
+  )
+```
+
