@@ -106,6 +106,7 @@ estados %>%
   ggplot() +
   geom_sf()
 
+glimpse(estados)
 ```
 
 
@@ -144,10 +145,15 @@ estados %>%
 ```{r}
 class(abjData::pnud_uf)
 
+pnud_uf <- abjData::pnud_uf
+
+
 pnud_uf_sf <- estados %>% 
   left_join(abjData::pnud_uf, by = c("code_state" = "uf")) 
 
 class(pnud_uf_sf)
+
+glimpse(pnud_uf_sf)
 ```
 
 
@@ -156,9 +162,13 @@ class(pnud_uf_sf)
 ```{r}
 # glimpse(pnud_uf_sf)
 
+# LEMBRAR: FILTRAR OS DADOS DE ANO
+
+
 pnud_uf_sf  %>% 
-  ggplot(aes(fill = idhm)) +
-  geom_sf() +
+  filter(ano == 2010) %>% 
+  ggplot() +
+  geom_sf(aes(fill = idhm), color = "white", size = 0.1) +
   theme_void()
 ```
 
@@ -312,7 +322,7 @@ ggplot() +
   # limite do estado
   geom_sf(data = estado_df, color = "gray") +
   # escolas
-  geom_sf(data = escolas_brasilia, aes(color = government_level), show.legend = FALSE) +
+  geom_sf(data = escolas_brasilia, aes(color = government_level)) +
   # rodovias
   geom_sf(data = rodovias_df, color = "black") +
   # adicionar tema
