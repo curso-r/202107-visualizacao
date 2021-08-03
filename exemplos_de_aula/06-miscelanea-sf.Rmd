@@ -12,6 +12,7 @@ knitr::opts_chunk$set(
 ```
 
 ## Carregar pacotes
+
 ```{r}
 library(dplyr)
 library(ggplot2)
@@ -32,8 +33,19 @@ pnud_uf_sf <- estados %>%
 
 ```{r}
 pnud_uf_sf %>%
+  sf::st_as_sf() %>%
+  sf::st_simplify(dTolerance = 1) %>%
   ggplot() +
-  geom_sf(aes(fill = espvida)) +
+  geom_sf(
+    aes(fill = espvida),
+    size = .3,
+    colour = "black"
+  )
+
+
+
+
+  scale_fill_viridis_c(option = "A", begin = .1, end = .9) +
   theme_bw() + # tema branco e preto
   
   # adicionar escala
@@ -46,7 +58,7 @@ pnud_uf_sf %>%
   # é legal experimentar outros,
   # como: tl, br, bl
   ggspatial::annotation_north_arrow(
-    location = "tr",
+    location = "br",
     height = unit(1, "cm"),
     width = unit(1, "cm")
   ) +
@@ -63,6 +75,7 @@ pnud_uf_sf %>%
     ),
     # muda o tamanho do texto no eixo x
     axis.text.x = element_text(size = 8)
-  )
+  ) + 
+  theme_void()
 ```
 
