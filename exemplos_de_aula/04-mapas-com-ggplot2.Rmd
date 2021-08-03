@@ -327,6 +327,8 @@ ggplot() +
   geom_sf(data = rodovias_df, color = "black") +
   # adicionar tema
   theme_void()
+
+glimpse(escolas_brasilia)
 ```
 
 
