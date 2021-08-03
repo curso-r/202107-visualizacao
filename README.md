@@ -70,7 +70,10 @@ versões modificadas do material básico da aula.
 | 03-ggplot2-revisao.html                                                  | <https://curso-r.github.io/202107-visualizacao/exemplos_de_aula/03-ggplot2-revisao.html>                                                 | <https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/03-ggplot2-revisao.html>                                                 |
 | 03-ggplot2-revisao.Rmd                                                   | <https://curso-r.github.io/202107-visualizacao/exemplos_de_aula/03-ggplot2-revisao.Rmd>                                                  | <https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/03-ggplot2-revisao.Rmd>                                                  |
 | 03-ggplot2.Rmd                                                           | <https://curso-r.github.io/202107-visualizacao/exemplos_de_aula/03-ggplot2.Rmd>                                                          | <https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/03-ggplot2.Rmd>                                                          |
+| 04-mapas-com-ggplot2.Rmd                                                 | <https://curso-r.github.io/202107-visualizacao/exemplos_de_aula/04-mapas-com-ggplot2.Rmd>                                                | <https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/04-mapas-com-ggplot2.Rmd>                                                |
 | 05-miscelanea.Rmd                                                        | <https://curso-r.github.io/202107-visualizacao/exemplos_de_aula/05-miscelanea.Rmd>                                                       | <https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/05-miscelanea.Rmd>                                                       |
+| 06-miscelanea-sf.html                                                    | <https://curso-r.github.io/202107-visualizacao/exemplos_de_aula/06-miscelanea-sf.html>                                                   | <https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-miscelanea-sf.html>                                                   |
+| 06-miscelanea-sf.Rmd                                                     | <https://curso-r.github.io/202107-visualizacao/exemplos_de_aula/06-miscelanea-sf.Rmd>                                                    | <https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-miscelanea-sf.Rmd>                                                    |
 
 ## Material extra
 
@@ -155,6 +158,30 @@ Referências extras comentadas nas aulas.
 |    3 | ggplot             | [Color Wheel - Adobe](https://color.adobe.com/pt/create/color-wheel)                                                                                                         |
 |    3 | ggplot             | [Cria paletas de cores](https://coolors.co/)                                                                                                                                 |
 |    3 | ggplot             | [Canva - gerar paleta de cores a partir de uma imagem](https://www.canva.com/colors/color-palette-generator/)                                                                |
+|    4 | Miscelânea         | [Galeria de html widgets](http://gallery.htmlwidgets.org)                                                                                                                    |
+|    4 | Miscelânea         | [Dicas para formatar tabelas](https://www.curso-r.com/blog/2020-12-03-dicas-relatorios-r4ds1_tabelas/)                                                                       |
+|    4 | Miscelânea         | [Documentação do r2d3](https://rstudio.github.io/r2d3/)                                                                                                                      |
+|    4 | Miscelânea         | [Dicas para formatar tabelas](https://www.curso-r.com/blog/2020-12-03-dicas-relatorios-r4ds1_tabelas/)                                                                       |
+|    4 | Miscelânea         | [Documentação do formattable](https://renkun-ken.github.io/formattable/)                                                                                                     |
+|    4 | Miscelânea         | [gt cookbook: guia para elaborar tabelas com o pacote gt](https://themockup.blog/static/gt-cookbook.html)                                                                    |
+|    4 | Miscelânea         | [Showcase de páginas com Distill](https://jhelvy.github.io/distillery/showcase.html#associa%C3%A7%C3%A3o-brasileira-de-jurimetria)                                           |
+|    4 | Mapas              | [Geocoding de endereços](https://github.com/dkahle/ggmap)                                                                                                                    |
+|    4 | Mapas              | [Unindo mapas the tidy way](https://blog.curso-r.com/posts/2017-11-23-union-sf/)                                                                                             |
+|    4 | Miscelânea         | [Galeria do htmlwidgets](http://gallery.htmlwidgets.org)                                                                                                                     |
+|    4 | Miscelânea         | [Documentação do pacote gt](https://gt.rstudio.com/)                                                                                                                         |
+|    4 | Mapas com ggplot2  | [Documentação do pacote geobr](https://ipeagit.github.io/geobr/)                                                                                                             |
+|    4 | Gráficos           | [Documentação do pacote patchwork](https://patchwork.data-imaginist.com/articles/guides/assembly.html)                                                                       |
+|    4 | Mapas              | [Pacote rayshader - mapas em 3d](https://www.rayshader.com)                                                                                                                  |
+|    4 | Dúvidas            | [R OpenSci](https://ropensci.org/)                                                                                                                                           |
+|    4 | trabalho final     | [Gifs!](https://giphy.com/)                                                                                                                                                  |
+|    4 | trabalho final     | [tidytuesday](https://github.com/rfordatascience/tidytuesday)                                                                                                                |
+|    4 | mapas com R        | [documentação do pacote geobr](https://ipeagit.github.io/geobr/)                                                                                                             |
+|    4 | mapas com R        | [Organização no GitHub r-spatial](http://github.com/r-spatial/)                                                                                                              |
+|    4 | mapas com R        | [Conteúdo sobre mapas em português](https://jonnyphillips.github.io/Ciencia_de_Dados/Mapas.html)                                                                             |
+|    4 | gráficos animados  | [exemplos legais com gganimate](https://www.statworx.com/ch/blog/animated-plots-using-ggplot-and-gganimate/)                                                                 |
+|    4 | gráficos animados  | [referencia do gganimate](https://gganimate.com/reference/index.html)                                                                                                        |
+|    4 | Miscelânea         | [wavesurfer](https://github.com/athospd/wavesurfer#readme)                                                                                                                   |
+|    4 | Miscelânea         | [d3js](https://d3js.org)                                                                                                                                                     |
 
 ## Dados
 
