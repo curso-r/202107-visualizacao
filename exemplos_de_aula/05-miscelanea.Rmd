@@ -140,7 +140,7 @@ municipios %>%
 
 ### plotly
 
- https://plot.ly é uma empresa bem grande de visualização de dados.
+https://plot.ly é uma empresa bem grande de visualização de dados.
 
 Eles produzem ferramentas para R, python, JavaScript e têm uma solução própria para fazer dashboards.
 
@@ -150,9 +150,12 @@ Para essa parte, vamos nos limitar ao ggplotly(), que é um transformador de ggp
 gg_idhm <- municipios %>% 
   ggplot(aes(x = gini, y = idhm, colour = espvida)) +
   geom_point() +
-  facet_wrap(~ano)
+  facet_wrap(~ano) +
+  theme(legend.position = "bottom")
 
 plotly::ggplotly(gg_idhm)
+
+# plot_ly()
 ```
 
 
@@ -165,6 +168,13 @@ O {highcharter} é uma adaptação do highcharts para R.
 Assim como no plotly, o highcharter tenta se aproximar da linguagem R através do ggplot2. No entanto, a abordagem é diferente: é fornecida uma sintaxe parecida com o ggplot2, com algumas adaptações.
 
 ```{r}
+
+# municipios %>% 
+#   dplyr::as_tibble() %>% 
+#   dplyr::count(regiao_nm) %>% 
+#   dplyr::mutate(prop = n/sum(n)) %>% 
+#   obsFase3:::pizza()
+
 municipios %>% 
   filter(ano == 2010, abbrev_state == estado_para_filtrar) %>% 
   hchart("scatter", hcaes(x = gini, y = idhm, color = espvida))
@@ -204,6 +214,7 @@ dados_summ <- municipios %>%
     names_from = ano, 
     values_from = c(pop, gini)
   )
+
 # criando a tabela 
 dados_summ %>%
   reactable(
