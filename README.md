@@ -218,7 +218,7 @@ Referências extras comentadas nas aulas.
 |    5 | Miscelânea         | [Pacote prettydoc](https://prettydoc.statr.me/)                                                                                                                              |
 |    5 | Miscelânea         | [Exemplos do rticles](https://pkgs.rstudio.com/rticles/articles/articles/examples.html)                                                                                      |
 |    5 | Web                | [(Git) Livro Zen do R: Git e GitHub](https://curso-r.github.io/zen-do-r/git-github.html)                                                                                     |
-|    5 | Web                | [(Git) Material sobre Git e GitHub no RStudio](https://beatrizmilz.com/git_rstudio.html)                                                                                     |
+|    5 | Web                | [(Git) Material sobre Git e GitHub no RStudio](https://curso-r.github.io/main-pacotes/slides/index.html#60)                                                                  |
 |    5 | xaringan           | [Documentação do pacote xaringan](http://slides.yihui.name/xaringan/)                                                                                                        |
 |    5 | xaringan           | [xaringan wiki](https://github.com/yihui/xaringan/wiki)                                                                                                                      |
 |    5 | xaringan           | [Livro R Markdown (Capítulo 7)](https://bookdown.org/yihui/rmarkdown/xaringan.html)                                                                                          |
