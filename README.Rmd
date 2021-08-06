@@ -16,7 +16,7 @@ library(magrittr)
 
 main_repo <- "main-visualizacao"
 turma <- "202107-visualizacao"
-num_aula <- 4
+num_aula <- 5
 ```
 
 

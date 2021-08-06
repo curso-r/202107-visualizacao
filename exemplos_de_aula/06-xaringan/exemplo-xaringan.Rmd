@@ -1,0 +1,52 @@
+---
+title: "Presentation Ninja"
+subtitle: "⚔<br/>with xaringan"
+author: "Yihui Xie"
+institute: "RStudio, PBC"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+    css: 
+      - "kunoichi"
+      - "ninjutsu"
+    chakra: libs/remark-latest.min.js
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r}
+# funcao para fazer download do remark
+# xaringan::summon_remark()
+```
+
+oi 
+
+--
+
+meu 
+
+--
+
+nome
+
+---
+
+## novo slide 
+
+
+```{r echo=FALSE, fig.align='center', out.width="50%"}
+knitr::include_graphics("https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
+```
+
+---
+
+## naruto
+
+
+```{r echo=FALSE, fig.align='center', out.width="50%"}
+knitr::include_graphics("img/naruto.png")
+```
