@@ -38,6 +38,38 @@ Fora do horário de aula ou monitoria:
 
 - perguntas sobre R, principalmente as que envolverem código, deverão ser enviadas no [nosso fórum](https://discourse.curso-r.com/).
 
+
+
+
+
+## Trabalhos finais premiados
+
+```{r}
+pasta <- "trabalhos_finais/"
+tibble::tibble(script = list.files(pasta, pattern = "index.html", recursive = TRUE)) %>%
+  dplyr::mutate(
+    link = paste0("https://curso-r.github.io/", turma, "/", pasta, script),
+    nome_underscore = fs::path_dir(script),
+    codigo = paste0(
+      "https://github.com/curso-r/",
+      turma,
+      "/tree/main/",
+      pasta,
+      nome_underscore
+    ),
+    nome = stringr::str_replace_all(nome_underscore, "_", " "),
+    link_relatorio = glue::glue("[Trabalho]({link})"),
+    link_codigo = glue::glue("[Código]({codigo})"),
+    link_relatorio = dplyr::case_when(
+      nome_underscore == "Nicholas_Marino" ~ glue::glue("[Trabalho](https://nacmarino.github.io/codex/posts/2021-08-27-prevendo-o-preco-de-apartamentos-em-niteroi/)"),
+                                      TRUE ~ link_relatorio)
+  ) %>%
+  dplyr::select(nome, link_relatorio, link_codigo) %>%
+  knitr::kable(col.names = c("Nome", "Link para o trabalho", "Link para o código"))
+
+# https://nacmarino.github.io/codex/posts/2021-08-27-prevendo-o-preco-de-apartamentos-em-niteroi/
+```
+
 ## Slides
 
 ```{r}

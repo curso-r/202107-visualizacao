@@ -24,6 +24,14 @@ Fora do horário de aula ou monitoria:
 -   perguntas sobre R, principalmente as que envolverem código, deverão
     ser enviadas no [nosso fórum](https://discourse.curso-r.com/).
 
+## Trabalhos finais premiados
+
+| Nome            | Link para o trabalho                                                                                        | Link para o código                                                                                  |
+|:----------------|:------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|
+| Itamar Cordeiro | [Trabalho](https://curso-r.github.io/202107-visualizacao/trabalhos_finais/Itamar_Cordeiro/index.html)       | [Código](https://github.com/curso-r/202107-visualizacao/tree/main/trabalhos_finais/Itamar_Cordeiro) |
+| Nicholas Marino | [Trabalho](https://nacmarino.github.io/codex/posts/2021-08-27-prevendo-o-preco-de-apartamentos-em-niteroi/) | [Código](https://github.com/curso-r/202107-visualizacao/tree/main/trabalhos_finais/Nicholas_Marino) |
+| Tales Gomes     | [Trabalho](https://curso-r.github.io/202107-visualizacao/trabalhos_finais/Tales_Gomes/index.html)           | [Código](https://github.com/curso-r/202107-visualizacao/tree/main/trabalhos_finais/Tales_Gomes)     |
+
 ## Slides
 
 | slide                                     | link                                                                                    |
