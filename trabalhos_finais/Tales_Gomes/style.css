@@ -1,0 +1,141 @@
+/*----------------ADDING WHITE SPACE-------------*/
+
+.title {
+  margin-top: 2.75em !important;
+  margin-bottom: 0.75em;
+}
+
+
+
+ /*------------- Apply Font to Whole Document---------------- */
+ 
+ 
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
+
+body {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    text-align: justify;
+}
+
+
+
+
+/* -----------HERO IMAGE AT TOP OF PAGE -----------*/
+  
+  /* LARGE HERO IMAGE AT TOP OF PAGE*/
+  
+  
+  .hero-image {
+    position: relative;
+    margin-bottom: 2em;
+    /* liner gradient tints the image darker for readability*/
+      background-image: linear-gradient( rgba(0,0,0,.2), rgba(0,0,0,.2) ), url(fig/hero-image.jpg); 
+    height: 500px;
+    background-size: cover;
+    background-color: #141c25f2;
+      background-position: center center;
+    display: flex; /* Change to `display: none` for no hero image */
+      justify-content: center;
+    align-items: center;
+  }
+  
+.top-text {
+  position: relative;
+  font-size: 34px;
+  padding-bottom: 0.5em
+  text-transform: uppercase;
+  text-align: center;
+  display: block; /* Change to `display: none` for no top text */
+    color: #ffffff72;
+}
+
+.bottom-text {
+  position: relative;
+  letter-spacing: 0.065em;
+  line-height: 1em;
+  font-size: 55px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block; /* Change to `display: none` for no bottom text */
+    color: #ffffff;
+    margin-bottom: 2.5rem;
+  font-weight: bold;
+}
+
+
+/*----------LOGO above TOC---------*/
+
+#TOC::before {
+  content: "";
+  display: block;
+  height: 90px;
+  margin: 20px 20px 40px 20px;
+  background-image: url("fig/Olympic_rings.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+
+
+/*------------Table of Contents (TOC)----------- */
+
+/*----------TOC Sticky Fix---------*/
+
+
+.main-container > .row:first-child > div:first-child.col-xs-12.col-sm-4.col-md-3{
+  position: sticky;
+  top: 10px;
+}
+
+#TOC{ 
+  position: initial;
+  width: 100%;
+  font-size: 16px;
+}
+
+/*----------TOC Sticky Adjustment---------*/
+
+.tocify ul, .tocify li { /* Increases spacing between TOC headers*/
+    line-height: 20px !important;
+}
+
+.tocify ul {
+  border-right: solid 1px #eee; /* Thin right border on TOC list */
+}
+
+
+
+/* Active TOC links*/
+
+.list-group-item.active, 
+.list-group-item.active:hover{
+  color: #050404;
+  background-color: #FFBF00;
+  border-color: #ccc;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Hovered TOC links*/
+
+.list-group-item:hover { 
+  color: #050404;
+  background-color: #35B2C9;
+  border: none;
+  font-size: 16px;
+  text-align: left;
+}
+
+
+/*----------------- links ---------------------*/
+
+a { 
+  color: #4e89bf;
+}
+
+
+a:hover {
+    color: #396892; /* darker color when hovering */
+}
