@@ -79,7 +79,11 @@ tibble::tibble(
 ) %>% 
   dplyr::filter(!stringr::str_detect(slide, "_files/"),
                 stringr::str_ends(slide, ".html")) %>% 
- # dplyr::slice(c(1,2,5,7)) %>% 
+  dplyr::mutate(
+    slide = stringr::str_remove(slide, "slides/"),
+    slide = stringr::str_remove(slide, ".html$"),
+    slides = glue::glue("[{slide}]({link})")) %>% 
+  dplyr::select(slides) %>% 
   knitr::kable()
 ```
 
@@ -90,13 +94,11 @@ Aqui colocamos scripts utilizados em aula que são novos ou que são versões mo
 ```{r}
 pasta <- "exemplos_de_aula/"
 tibble::tibble(
-  script = list.files(pasta, pattern = ".R|.html|.css", recursive = TRUE),
-  link = paste0("https://curso-r.github.io/", turma, "/", pasta, script),
-  link_no_github = paste0("https://github.com/curso-r/", turma, "/blob/main/", pasta, script)
-  
-
+  script = list.files(pasta),
+  link_no_github = paste0("https://github.com/curso-r/", turma, "/blob/main/", pasta, script),
+  link = glue::glue("[Link no GitHub]({link_no_github})")
 ) %>% 
- # dplyr::slice(-c(28)) %>% 
+  dplyr::select(script, link) %>% 
   knitr::kable()
 ```
 
