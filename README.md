@@ -49,27 +49,27 @@ Fora do horário de aula ou monitoria:
 Aqui colocamos scripts utilizados em aula que são novos ou que são
 versões modificadas do material básico da aula.
 
-| script                   | link                                                                                                                 |
-|:-------------------------|:---------------------------------------------------------------------------------------------------------------------|
-| 01-rmarkdown             | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/01-rmarkdown)             |
-| 02-html-css              | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/02-html-css)              |
-| 02-pagedown              | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/02-pagedown)              |
-| 03-ggplot2-revisao.html  | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/03-ggplot2-revisao.html)  |
-| 03-ggplot2-revisao.Rmd   | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/03-ggplot2-revisao.Rmd)   |
-| 03-ggplot2.Rmd           | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/03-ggplot2.Rmd)           |
-| 04-mapas-com-ggplot2.Rmd | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/04-mapas-com-ggplot2.Rmd) |
-| 05-miscelanea.Rmd        | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/05-miscelanea.Rmd)        |
-| 06-miscelanea-sf.html    | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-miscelanea-sf.html)    |
-| 06-miscelanea-sf.Rmd     | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-miscelanea-sf.Rmd)     |
-| 06-officedown-ppt.pptx   | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-officedown-ppt.pptx)   |
-| 06-officedown-ppt.Rmd    | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-officedown-ppt.Rmd)    |
-| 06-officedown.docx       | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-officedown.docx)       |
-| 06-officedown.Rmd        | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-officedown.Rmd)        |
-| 06-prettydoc             | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-prettydoc)             |
-| 06-xaringan              | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-xaringan)              |
-| exemplo-pdf.pdf          | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/exemplo-pdf.pdf)          |
-| exemplo-pdf.Rmd          | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/exemplo-pdf.Rmd)          |
-| template.docx            | [Link no GitHub](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/template.docx)            |
+| link                                                                                                                           |
+|:-------------------------------------------------------------------------------------------------------------------------------|
+| [01-rmarkdown](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/01-rmarkdown)                         |
+| [02-html-css](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/02-html-css)                           |
+| [02-pagedown](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/02-pagedown)                           |
+| [03-ggplot2-revisao.html](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/03-ggplot2-revisao.html)   |
+| [03-ggplot2-revisao.Rmd](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/03-ggplot2-revisao.Rmd)     |
+| [03-ggplot2.Rmd](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/03-ggplot2.Rmd)                     |
+| [04-mapas-com-ggplot2.Rmd](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/04-mapas-com-ggplot2.Rmd) |
+| [05-miscelanea.Rmd](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/05-miscelanea.Rmd)               |
+| [06-miscelanea-sf.html](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-miscelanea-sf.html)       |
+| [06-miscelanea-sf.Rmd](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-miscelanea-sf.Rmd)         |
+| [06-officedown-ppt.pptx](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-officedown-ppt.pptx)     |
+| [06-officedown-ppt.Rmd](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-officedown-ppt.Rmd)       |
+| [06-officedown.docx](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-officedown.docx)             |
+| [06-officedown.Rmd](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-officedown.Rmd)               |
+| [06-prettydoc](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-prettydoc)                         |
+| [06-xaringan](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/06-xaringan)                           |
+| [exemplo-pdf.pdf](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/exemplo-pdf.pdf)                   |
+| [exemplo-pdf.Rmd](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/exemplo-pdf.Rmd)                   |
+| [template.docx](https://github.com/curso-r/202107-visualizacao/blob/main/exemplos_de_aula/template.docx)                       |
 
 ## Material extra
 
@@ -211,25 +211,25 @@ Referências extras comentadas nas aulas.
 
 ## Dados
 
-| script                        | link                                                                               |
-|:------------------------------|:-----------------------------------------------------------------------------------|
-| geobr/escolas\_brasilia.Rds   | <https://curso-r.github.io/202107-visualizacao/dados/geobr/escolas_brasilia.Rds>   |
-| geobr/estado\_df.Rds          | <https://curso-r.github.io/202107-visualizacao/dados/geobr/estado_df.Rds>          |
-| geobr/estados.Rds             | <https://curso-r.github.io/202107-visualizacao/dados/geobr/estados.Rds>            |
-| geobr/municipio\_brasilia.Rds | <https://curso-r.github.io/202107-visualizacao/dados/geobr/municipio_brasilia.Rds> |
-| geobr/municipios\_todos.rds   | <https://curso-r.github.io/202107-visualizacao/dados/geobr/municipios_todos.rds>   |
-| imdb.rds                      | <https://curso-r.github.io/202107-visualizacao/dados/imdb.rds>                     |
-| municipios\_tibble.Rds        | <https://curso-r.github.io/202107-visualizacao/dados/municipios_tibble.Rds>        |
-| rodovias\_df.Rds              | <https://curso-r.github.io/202107-visualizacao/dados/rodovias_df.Rds>              |
+| link\_no\_github                                                                                                  |
+|:------------------------------------------------------------------------------------------------------------------|
+| [geobr/escolas\_brasilia.Rds](https://curso-r.github.io/202107-visualizacao/dados/geobr/escolas_brasilia.Rds)     |
+| [geobr/estado\_df.Rds](https://curso-r.github.io/202107-visualizacao/dados/geobr/estado_df.Rds)                   |
+| [geobr/estados.Rds](https://curso-r.github.io/202107-visualizacao/dados/geobr/estados.Rds)                        |
+| [geobr/municipio\_brasilia.Rds](https://curso-r.github.io/202107-visualizacao/dados/geobr/municipio_brasilia.Rds) |
+| [geobr/municipios\_todos.rds](https://curso-r.github.io/202107-visualizacao/dados/geobr/municipios_todos.rds)     |
+| [imdb.rds](https://curso-r.github.io/202107-visualizacao/dados/imdb.rds)                                          |
+| [municipios\_tibble.Rds](https://curso-r.github.io/202107-visualizacao/dados/municipios_tibble.Rds)               |
+| [rodovias\_df.Rds](https://curso-r.github.io/202107-visualizacao/dados/rodovias_df.Rds)                           |
 
 ## Redes sociais da Curso-R
 
-Instagram: <https://www.instagram.com/cursoo_r/>
+-   [Instagram](https://www.instagram.com/cursoo_r/)
 
-Twitter: <https://twitter.com/curso_r>
+-   [Twitter](https://twitter.com/curso_r)
 
-Youtube: <https://www.youtube.com/c/CursoR6/featured>
+-   [Youtube](https://www.youtube.com/c/CursoR6/featured)
 
-Linkedin: <https://www.linkedin.com/company/curso-r/>
+-   [Linkedin](https://www.linkedin.com/company/curso-r/)
 
-Facebook: <https://www.facebook.com/cursodeR>
+-   [Facebook](https://www.facebook.com/cursodeR)

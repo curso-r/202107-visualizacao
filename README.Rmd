@@ -96,9 +96,9 @@ pasta <- "exemplos_de_aula/"
 tibble::tibble(
   script = list.files(pasta),
   link_no_github = paste0("https://github.com/curso-r/", turma, "/blob/main/", pasta, script),
-  link = glue::glue("[Link no GitHub]({link_no_github})")
+  link = glue::glue("[{script}]({link_no_github})")
 ) %>% 
-  dplyr::select(script, link) %>% 
+  dplyr::select(link) %>% 
   knitr::kable()
 ```
 
@@ -124,20 +124,22 @@ googlesheets4::gs4_deauth()
 pasta <- "dados/"
 tibble::tibble(
   script = list.files(pasta, recursive = TRUE,pattern = ".zip|.Rds|.rds"),
-  link = paste0("https://curso-r.github.io/", turma, "/", pasta, script)
+  link = paste0("https://curso-r.github.io/", turma, "/", pasta, script),
+  link_no_github = glue::glue("[{script}]({link})")
 ) %>% 
+  dplyr::select(link_no_github) %>% 
   knitr::kable()
 ```
 
 
 ## Redes sociais da Curso-R
 
-Instagram: https://www.instagram.com/cursoo_r/
+- [Instagram](https://www.instagram.com/cursoo_r/) 
 
-Twitter: https://twitter.com/curso_r
+- [Twitter](https://twitter.com/curso_r)
 
-Youtube: https://www.youtube.com/c/CursoR6/featured
+- [Youtube](https://www.youtube.com/c/CursoR6/featured) 
 
-Linkedin: https://www.linkedin.com/company/curso-r/
+- [Linkedin](https://www.linkedin.com/company/curso-r/)
 
-Facebook: https://www.facebook.com/cursodeR
+- [Facebook](https://www.facebook.com/cursodeR) 
